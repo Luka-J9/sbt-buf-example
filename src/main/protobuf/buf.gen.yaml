@@ -1,0 +1,11 @@
+version: v2
+plugins:
+  - remote: buf.build/community/scalapb-scala:v0.11.17
+    opt:
+      - grpc
+      - flat_package
+    out: ../../../target/src_managed/buf/scala
+  - local: protoc-gen-fs2-grpc
+    opt:
+      - flat_package
+    out: ../../../target/src_managed/buf/scala
